@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .calculator {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        background-color: #fff;
+        padding: 20px;
+    }
+
+    .display {
+        width: 100%;
+        height: 50px;
+        font-size: 2em;
+        text-align: right;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .buttons button {
+        width: 100%;
+        height: 50px;
+        font-size: 1.5em;
+        border: none;
+        border-radius: 5px;
+        background-color: #e0e0e0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .buttons button:hover {
+        background-color: #d0d0d0;
+    }
+
+    .buttons button:active {
+        background-color: #c0c0c0;
+    }
+
+    .buttons button:nth-child(4n) {
+        background-color: #ff9500;
+        color: white;
+    }
+
+    .buttons button:nth-child(4n):hover {
+        background-color: #e08900;
+    }
+
+    .buttons button:nth-child(4n):active {
+        background-color: #c07800;
+    }
+
+    .buttons button:nth-last-child(2) {
+        background-color: #ff3b30;
+        color: white;
+    }
+
+    .buttons button:nth-last-child(2):hover {
+        background-color: #e03328;
+    }
+
+    .buttons button:nth-last-child(2):active {
+        background-color: #c02b20;
+    }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="calculator">
+        <input type="text" class="display" id="display" disabled>
+        <div class="buttons">
+            <button type="button" onclick="display('1')">1</button>
+            <button type="button" onclick="display('2')">2</button>
+            <button type="button" onclick="display('3')">3</button>
+            <button type="button" onclick="operation('+')">+</button>
+            <button type="button" onclick="display('4')">4</button>
+            <button type="button" onclick="display('5')">5</button>
+            <button type="button" onclick ="display('6')">6</button>
+            <button type="button" onclick="operation('-')">-</button>
+            <button type="button" onclick="display('7')">7</button>
+            <button type="button" onclick="display('8')">8</button>
+            <button type="button" onclick="display('9')">9</button>
+            <button type="button" onclick="operation('*')">*</button>
+            <button type="button" onclick="display('0')">0</button>
+            <button type="button" onclick="operation('/')">/</button>
+            <button type="button" onclick="calculate()">=</button>
+            <button type="button" onclick="del()">C</button>
+            <button type="button" onclick="operation('^')">^</button>
+            
+            
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
