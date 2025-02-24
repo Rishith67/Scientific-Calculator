@@ -90,6 +90,9 @@
     .buttons button:nth-last-child(2):active {
         background-color: #c02b20;
     }
+    .onex{
+        background-color: #c0c0c0;
+    }
     </style>
 </head>
 <body>
@@ -111,11 +114,16 @@
             <button type="button" onclick="operation('*')">*</button>
             <button type="button" onclick="display('0')">0</button>
             <button type="button" onclick="operation('/')">/</button>
-            <button type="button" onclick="calculate()">=</button>
+            <button type="button" id="calculate" onclick="calculate()">=</button>
             <button type="button" onclick="clearscreen()">C</button>
             <button type="button" onclick="operation('^')">^</button>
-            
-            
+            <button type="button" class="onex" onclick="operation('sin')">sin</button>
+            <button type="button" class="onex" onclick="operation('cos')">cos</button>
+            <button type="button" class="onex" onclick="operation('tan')">tan</button>
+            <button type="button" class="onex" onclick="operation('fact')">fact</button>
+            <button type="button" onclick="operation('ncr')">ncr</button>
+            <button type="button" onclick="operation('npr')">npr</button>
+            <button type="button" onclick = "display('.')">.</button>
         </div>
 
     </div>
