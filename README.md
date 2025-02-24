@@ -1,0 +1,1 @@
+This is a replica of the scientific calculator that generally engineering students use I Usually forget my calci at hostel and lose my attendace bcz of that to avoid that I am creating a replica of my calculator and hope it does help u guys too some of the features of this replica is : ->addition ->subtraction ->multiplication ->Division ->power
