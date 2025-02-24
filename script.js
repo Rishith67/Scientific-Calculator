@@ -2,20 +2,18 @@ let screen = document.getElementById("display");
 let firstoperation;
 let currentoperation;
 let secondoperation;
+
 function display(num){
-    clr();
+  
     screen.value = screen.value + num;
 
 }
 function operation(op){
+    firstoperation = parseFloat(screen.value);
     currentoperation = op;
-    firstoperation = screen.value;
-    screen.value = op;
-    
+    screen.value = '';
 }
-function clr(){
-    screen.value = "";
-}
+
 function calculate(){
     secondoperation = screen.value;
     switch (currentoperation){
@@ -34,7 +32,7 @@ function calculate(){
         case '/':
             screen.value = parseInt(firstoperation) / 
             parseInt(secondoperation);
-            break
+            break;
         case '^':
             screen.value = Math.pow(parseInt(firstoperation),parseInt(secondoperation));
             break;
@@ -44,9 +42,8 @@ function calculate(){
 
 
 }
-function del(){
+function clearscreen(){
     firstoperation = null;
     secondoperation = null;
-    currentoperation = null;
-    screen.value = "";
+    screen.value = '';
 }
